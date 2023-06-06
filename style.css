@@ -1,0 +1,75 @@
+body {
+    background-image: url('js1.jpg'); /* Replace 'path/to/image.jpg' with the actual image path */
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.popup-content {
+    position: fixed;
+    top: 50%;
+    right: 20px; /* Adjust this value as needed */
+    transform: translateY(-50%);
+    background-image: url('js1.jpg'); /* Replace 'path/to/image.jpg' with the actual image path */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #000; /* Set the text color for better visibility on the background image */
+}
+
+.popup-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.popup-image {
+    max-width: 35%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.popup-text {
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: #999;
+}
+mark {
+    background-color: yellow; /* Set the background color for the highlighted text */
+    color: black; /* Set the text color for the highlighted text */
+}
+.icons {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .icons ion-icon {
+    font-size: 24px; /* Adjust the size as desired */
+  }
+  .icons ion-icon:hover {
+    opacity: 0.7; 
+    color: aqua;
+  }
+  

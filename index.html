@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AMARAH</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #782334;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        
+        .open-btn {
+            padding: 10px 20px;
+            background-color: hsl(203, 75%, 31%);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="bal2.png" class="logo"></a>
+        </header>
+    </section>
+
+    <h1>WELCOME TO BALUNATIC'S</h1>
+
+    
+    <button class="open-btn" data-popup="popup1">HOME</button>
+
+    
+    <button class="open-btn" data-popup="popup2">ABOUT</button>
+
+    
+    <button class="open-btn" data-popup="popup3">PRODUCTS</button>
+
+    
+    <button class="open-btn" data-popup="popup4">CONTACT</button>
+
+    
+    <button class="open-btn" data-popup="popup5">GALLERY</button>
+
+    
+    <div class="popup" id="popup1">
+      <div class="popup-content">
+          <h2 class="popup-title">HOMEPAGE</h2>
+          <div class="popup-body">
+              <img src="js1.jpg" alt="Popup 1 Image" class="popup-image">
+              <p class="popup-text">Welcome to Balunatic's, where unleashing imagination with balloons art designs!Join us on this digital journey and unlock a world of creativity and arts in different occasions. Welcome to our homepage! 
+
+                
+                
+                </p>
+            </div>
+        <button class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+        <h2 class="popup-title">ABOUTPAGE</h2>
+        <div class="popup-body">
+            <img src="IMG9.png" alt="Popup 1 Image" class="popup-image">
+            <p class="popup-text">Introducing our different kinds of balloons and  aesthetic balloon arrangements and decorations:
+
+                1. Latex balloons
+                2. Foil balloons
+                3. Birthday balloon arrangements
+                4. Anniversary balloon arrangements
+                5. Baby Shower balloon arrangements
+                6. Welcome Home balloon arrangements
+                7. School Opening balloon arrangements
+                8. Shop opening balloon arrangements
+                
+               </p>
+        </div>
+        <button class="close-btn">Close</button>
+    </div>
+   </div>
+   <div class="popup" id="popup3">
+    <div class="popup-content">
+        <h2 class="popup-title">PRODUCTS</h2>
+        <div class="popup-body">
+            <img src="IMG9.png" alt="Popup 1 Image" class="popup-image">
+        <p class="popup-text">Introducing our different kinds of balloons and  aesthetic balloon arrangements and decorations:
+
+        </div>
+        <button class="close-btn">Close</button>
+    </div>
+   </div>
+    <div class="popup" id="popup4">
+        <div class="popup-content">
+            <h2 class="popup-title">CONTACT</h2>
+            <div class="popup-body">
+                <img src="IMG7.png" alt="Popup 1 Image" class="popup-image">
+            <p class="popup-text">Gmail:
+                For inquiries, feedback, or any other communication, you can reach us via email at <mark><div mmmadera1727@gmail.com=""></div></mark>. 
+                
+                Facebook:
+                Connect with us on Facebook at <mark>[https://www.facebook.com/myra.macazar/]</mark>. Like and follow our page to stay updated on the latest balloons arrangements and designs.
+                
+                Contact Number:
+                If you prefer to speak with us directly, you can reach us at <mark>[09510844954]</mark>. </p>
+        </div>
+        <button class="close-btn">Close</button>
+    </div>
+   </div>
+
+    <div class="popup" id="popup5">
+        <div class="popup-content">
+            <h2 class="popup-title">GALLERY</h2>
+            <div class="popup-body">
+                <img src="IMG9.png" alt="Popup 1 Image" class="popup-image">
+                
+            <p class="popup-text">BALUNATIC'S</p>
+        </div>
+        <button class="close-btn">Close</button>
+    </div>
+ </div>
+
+ <div class="icons">
+    <a href="https://www.facebook.com/myra.macazar/"><ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon></a>
+    <a href="https://www.instagram.com/myramadera/=="><ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon></a>
+    <a href="https://www.tiktok.com/@myrammadera?_t=8cvziUsGcJl&_r=1&fbclid=IwAR2-L6VfQF0PsW6akmqrmTxqU8PBN0Smd1Y_Rt7ibon014rkHzEYGP0KqL8"><ion-icon name="logo-tiktok" role="img" class="md hydrated" aria-label="logo tiktok"></ion-icon></a>
+ </div>
+
+ <script src=" https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <script>
+    
+        var openBtns = document.querySelectorAll('.open-btn');
+        var closeBtns = document.querySelectorAll('.close-btn');
+        var popups = document.querySelectorAll('.popup');
+
+        
+        openBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var popupId = btn.getAttribute('data-popup');
+                var popup = document.getElementById(popupId);
+                popup.style.display = 'block';
+            });
+        });
+
+        
+        closeBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var popup = btn.parentNode.parentNode;
+                popup.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
